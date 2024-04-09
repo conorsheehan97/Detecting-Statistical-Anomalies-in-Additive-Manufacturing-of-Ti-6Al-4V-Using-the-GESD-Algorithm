@@ -7,5 +7,9 @@ This test is an iterative form of the Grubbs Anomaly detection test, and cycles 
 
 The number of detected anomalies vs signal processing method was analysed here, as well as comparison of statistical results against known defective layers. 
 
+Models used: GESD, 
+
+Packages used: Pandas, Numpy, Matplotlib, SciPy, ntpath
+
 
 
