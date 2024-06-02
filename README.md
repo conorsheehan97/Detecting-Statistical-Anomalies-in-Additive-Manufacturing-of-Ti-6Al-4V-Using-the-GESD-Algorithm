@@ -1,15 +1,28 @@
-# Anomaly-Detection-with-GESD
-Project aiming to detect Statistical Anomalies within in-process data produced during the Additive Manufacture of Ti-6Al-4V using the GESD algorithm!
+# Detecting Statistical Anomalies in Additive Manufacturing of Ti-6Al-4V Using the GESD Algorithm
+## Overview
+This project aims to detect statistical anomalies within in-process data produced during the additive manufacture of Ti-6Al-4V using the Generalized Extreme Studentized Deviate (GESD) algorithm. With the growing popularity of 3D printing for producing medical components tailored to patients' physiology, improving the manufacturing process by detecting defects is vital.
 
-3D printing is becoming increasingly popular for producing medical components, as it lets you tailor the bone implant to the patients physiology. As this technology becomes more popular, improving the process by detecting defects will become vital. To this end, this project aimed to detect a mechanical defect, within the component, through the analysis of in-process data using the Generalised Extreme Studentized Deviate (GESD) test. 
+## Purpose
+The goal is to detect mechanical defects in components through the analysis of in-process data using the GESD test. The GESD algorithm is an iterative form of the Grubbs anomaly detection test, cycling through data until anomalies are no longer present. Due to the lack of available packages implementing this model, the GESD test was written as a custom function built on prewritten functions.
 
-This test is an iterative form of the Grubbs Anomaly detection test, and cycles through the data a set number of times, until anomalies are no longer present. No packages that implemented this model were known, so the test was written as a function built on prewritten functions. Preprocessing of the signals to remove noise was also required, with simple centered/non-centered rolling averages analysed, as well as Savitsky Golay interpolation. 
+## Methodology
+### Preprocessing:
+ - Noise removal from signals using centered/non-centered rolling averages and Savitzky-Golay interpolation.
+### Anomaly Detection:
+ - Implementation of the GESD test to identify statistical anomalies.
+### Analysis:
+ - Evaluation of the number of detected anomalies against different signal processing methods.
+ - Comparison of statistical results against known defective layers.
+### Models Used
+ - Generalized Extreme Studentized Deviate (GESD)
+### Packages Used
+ - Pandas
+ - Numpy
+ - Matplotlib
+ - SciPy
+ - ntpath
 
-The number of detected anomalies vs signal processing method was analysed here, as well as comparison of statistical results against known defective layers. 
+## Conclusion
+This project demonstrates the application of the GESD algorithm to detect mechanical defects in 3D printed components. By preprocessing in-process data and applying the GESD test, we were able to identify statistical anomalies that correlate with known defective layers. The methods and models developed here can be applied to other manufacturing processes to improve defect detection and quality control.
 
-Models used: GESD, 
-
-Packages used: Pandas, Numpy, Matplotlib, SciPy, ntpath
-
-
-
+We invite contributions and feedback to further refine and enhance this project. Thank you for exploring this work, and we hope it provides valuable insights and tools for your own endeavors in manufacturing and anomaly detection.
